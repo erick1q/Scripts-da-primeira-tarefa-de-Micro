@@ -1,0 +1,40 @@
+#Este programa foi feito em python
+contas1= ["Vazio","Vazio","Vazio","Vazio","Vazio"]
+contas2= ["Vazio","Vazio","Vazio","Vazio","Vazio"]
+
+print("Este programa só aceita 5 contas por vez \n")
+for contador in range (0,5):
+    conta = (input("Digite o nome da conta "f"{contador+1}:"))
+    prioridade = int(input("Qual o nivel de prioridade da conta?[Para alta prioridade digite 1],[Baixa Prioridade digite 2]= "));
+    if (prioridade==1 ):
+        contas1[contador] = conta
+        contas2[contador] ="V#$%"
+    if (prioridade==2):
+        contas2[contador] = conta
+        contas1[contador] = "V#$%"
+    if (prioridade<1) or (prioridade>2):
+        print("Valor invalido!!, repita a seleção de prioridade")
+        controle="F";
+        while (controle=="F"):
+            prioridade = int(input("Qual o nivel de prioridade da conta?[Para alta prioridade 1],[Baixa Prioridade digite 2]= "));
+            if (prioridade < 1) or (prioridade > 2):
+                controle="F"
+            else:
+                controle="V"
+                if (prioridade == 1):
+                    contas1[contador] = conta
+                    contas2[contador] = "V#$%"
+                if (prioridade == 2):
+                    contas2[contador] = conta
+                    contas1[contador] = "V#$%"
+print("\n")
+print("As contas serão organizadas por ordem de prioridade")
+print("Prioridade nivel 1")
+for item in contas1:
+    if item!="V#$%":
+        print(item)
+print("\n")
+print("Prioridade nivel 2")
+for item2 in contas2:
+    if item2!="V#$%":
+        print(item2)
