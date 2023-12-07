@@ -1,0 +1,19 @@
+#Este programa foi feito em python
+valor_contas=[0,0,0,0,0]
+soma=0
+print("Este programa só aceita 5 (cinco) contas \n")
+salario = float(input(("Digite seu salario: R$")))
+for contador1 in range (0,5):
+    valor_contas[contador1] = float(input("Digite o nome da conta "f"{contador1+1}:"))
+    soma= valor_contas[contador1] + soma
+valor_contas.sort()
+
+for item3 in valor_contas:
+      print("R$ "f"{item3}")
+print("A soma de todas as contas é igual a R$ "f"{soma}")
+renda= salario - soma
+print("Seu salario é de R$"f"{salario}")
+if (renda>=0):
+    print("Você está dentro do orçamento, e te sobrou R$"f"{renda}")
+else:
+    print("Você está fora do orçamento, e tem uma divida de R$"f"{renda}")
